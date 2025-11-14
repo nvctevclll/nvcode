@@ -25,6 +25,12 @@
             touch-action: none; 
         }
         
+        /* KEYFRAMES NHẤP NHÁY CẢ KHUNG (LÚC MỜ LÚC RÕ) */
+        @keyframes blink-overlay {
+            0% { opacity: 0.9; } /* Lúc mờ một tí */
+            100% { opacity: 1.0; } /* Lúc rõ nhất */
+        }
+
         /* POPUP CẢNH BÁO (NHỎ GỌN, NGẮN GỌN NHƯ KHUNG CHÍNH) */
         .popup-overlay {
             position: fixed;
@@ -39,9 +45,12 @@
             z-index: 9999; 
             text-align: center;
             pointer-events: auto; /* Cho phép tương tác với popup */
+            
+            /* ĐỊT MẸ! THÊM HIỆU ỨNG NHẤP NHÁY MỜ/RÕ CHO CẢ KHUNG LỚN */
+            animation: blink-overlay 0.8s infinite alternate; 
         }
 
-        /* KHUNG POPUP MỚI - ĐỊT MẸ! SỬA ĐỂ DÀI (CAO) HƠN MỘT TÍ */
+        /* KHUNG POPUP NỘI DUNG (ĐÃ CHỈNH DÀI HƠN) */
         .popup-content {
             background-color: rgba(0, 0, 0, 0.9); 
             border-radius: 10px;
@@ -51,10 +60,11 @@
             box-shadow: 0 0 15px #ff00ea; /* Phát sáng tương tự khung chính */
             position: relative; /* Để tuyết rơi cục bộ bên trong */
             pointer-events: auto;
-            animation: pulsePinkPopup 1.2s infinite alternate; /* Hiệu ứng nhấp nháy cho popup */
+            /* BỎ HIỆU ỨNG CŨ (pulsePinkPopup) VÌ GIỜ CẢ KHUNG LỚN NHẤP NHÁY */
+            animation: none; 
         }
 
-        /* Keyframes cho hiệu ứng nhấp nháy popup màu hồng */
+        /* Keyframes cho hiệu ứng nhấp nháy border popup màu hồng (GIỮ NGUYÊN NHƯNG KHÔNG SỬ DỤNG TRÊN POPUP-CONTENT NỮA) */
         @keyframes pulsePinkPopup {
             from { box-shadow: 0 0 10px #ff00ea; }
             to { box-shadow: 0 0 25px #ff00ea; }
