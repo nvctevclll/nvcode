@@ -41,13 +41,13 @@
             pointer-events: auto; /* Cho phép tương tác với popup */
         }
 
-        /* KHUNG POPUP MỚI - ĐÃ SỬA ĐỂ TO HƠN MỘT TÍ */
+        /* KHUNG POPUP MỚI - ĐỊT MẸ! SỬA ĐỂ DÀI (CAO) HƠN MỘT TÍ */
         .popup-content {
             background-color: rgba(0, 0, 0, 0.9); 
             border-radius: 10px;
-            padding: 15px; /* Tăng padding */
-            width: 95%; /* Tăng width 1 tí */
-            max-width: 280px; /* Tăng max-width từ 220px lên 280px */
+            padding: 30px 15px; /* Tăng padding trên/dưới mạnh để cao hơn */
+            width: 90%; 
+            max-width: 250px; /* Giữ độ rộng gần mức cũ (250px) */
             box-shadow: 0 0 15px #ff00ea; /* Phát sáng tương tự khung chính */
             position: relative; /* Để tuyết rơi cục bộ bên trong */
             pointer-events: auto;
@@ -62,20 +62,20 @@
 
         .popup-content h3 {
             color: #00ff41;
-            font-size: 1.1em; /* Tăng font size */
+            font-size: 1.1em; 
             margin-top: 5px;
-            margin-bottom: 7px; /* Tăng margin */
+            margin-bottom: 10px; 
             font-weight: 900; 
             text-shadow: 0 0 5px #00ff41;
         }
 
         .popup-content p {
             color: #ffffff; 
-            font-size: 0.85em; /* Tăng font size */
+            font-size: 0.85em; 
             font-weight: 700; 
-            line-height: 1.4; /* Tăng line height */
+            line-height: 1.5; /* Dãn dòng */
             text-shadow: 0 0 3px rgba(255, 255, 255, 0.5); 
-            margin-bottom: 12px; /* Tăng margin */
+            margin-bottom: 20px; /* Tăng khoảng cách dưới */
         }
         .popup-content strong {
             color: #ff00ea;
@@ -87,9 +87,9 @@
             background-color: #CC0000; 
             color: #ffffff;
             border: none;
-            padding: 10px 15px; /* Tăng padding */
-            margin-top: 15px; /* Tăng margin */
-            font-size: 1em; /* Tăng font size */
+            padding: 10px 15px; 
+            margin-top: 25px; /* Tăng khoảng cách trên nút bấm để dài hơn */
+            font-size: 1em; 
             font-weight: 900;
             border-radius: 5px;
             cursor: pointer;
